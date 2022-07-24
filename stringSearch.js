@@ -10,7 +10,7 @@ function searchString(long, short) {
 
       if ( j === short.length - 1) {
         total += 1;
-        i += short.length - 1;
+        i += short.length - 1; // optimization -- after the short word is found, it cannot be found again within the index containing it, so we need to add its length to continue searching
       }
     }
   }
@@ -31,3 +31,5 @@ function searchString(long, short) {
 
   return unique;
 }
+
+// Both solutions are O(n^2) because they both use two loops.
