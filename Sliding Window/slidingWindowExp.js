@@ -30,3 +30,21 @@
 // 1<=K<=N
 // 1<=A[i]<=10^6
 // MOD = 10^9+7
+
+const slidingWindowExp = (array, length, size) => {
+    const max = -Infinity;
+    let windowCurrent = 0;
+    let windowStart = 0;
+    
+    let window = [];
+    for(let windowEnd = 0; windowEnd < length; windowEnd++) {
+        //windowCurrent += array[windowEnd];
+        window.push(array[windowEnd]);
+
+        if(windowEnd >= k - 1) {   // [0,1,2] = k = 3, we want to start our condition on windowEnd = 2 because that means k = 3
+        
+            // do work here
+            window.shift();
+        }
+    }
+}

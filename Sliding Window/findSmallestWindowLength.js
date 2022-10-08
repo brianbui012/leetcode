@@ -30,21 +30,31 @@
 // 1 <= K <=10^9
 // 1 <= A[i] <=10^5
 
+
+
+//We basically do a sliding window, we increase the window enough to get passed the target, when we get passed the target we can then decrease the window
+//size from the left
 const findSmallestWindowLength = (array, target) => {
     let windowStart = 0;
     let current = 0;
     let minSize = Infinity;
     
     for(let windowEnd = 0; windowEnd < array.length; windowEnd++) {
+      //building up the window
       current += array[windowEnd];
   
       while(current > target) {
+        // we want to find the size of the min window that passes the target, so windowEnd - windowStart + 1 to get the size
         minSize = Math.min(minSize, windowEnd - windowStart + 1); // size of the window
+        
+        //subtract the head of the array and increment windowStart to be smaller
         current -= array[windowStart];
   
         windowStart++;  
       }
     }
+
+    // if minSize is Infinity then it means that we never entered the while loop, there for the total of the array never passed the target
     if(minSize === Infinity){
       return -1;
     }
