@@ -52,5 +52,5 @@ const findSmallestWindowLength = (array, target) => {
   }
   
   
-  console.log(sw([1,2,3,4,5], 8))
-  console.log(sw([1,2,1,1,1], 8))
+  console.log(findSmallestWindowLength([1,2,3,4,5], 8))
+  console.log(findSmallestWindowLength([1,2,1,1,1], 8))
