@@ -42,6 +42,18 @@ class Node {
   
       return head.val + this.totalSumR(head.next);
     }
+
+    returnIndex(val) {
+        let current = this.head;
+        let index = 0;
+        while(current !== null) {
+          if(current.val === val) return index;
+          index++;
+          current = current.next;
+        }
+    
+        return -1;
+      }
   }
   
   
@@ -61,6 +73,7 @@ class Node {
   console.log(LL.arrayify());
   console.log(LL.totalSum());
   console.log(LL.totalSumR());
-  
+  console.log(LL.returnIndex(7));
+
   
   
