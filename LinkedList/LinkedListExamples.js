@@ -17,7 +17,6 @@ class Node {
         values.push(current.val);
         current = current.next;
       }
-  
       return values;
     }
   
