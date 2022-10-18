@@ -91,7 +91,7 @@ class Node {
   const longestPath = (root) => {
       if(root === null) return 0;
       
-      return 1+ Math.max(longestPath(root.left), longestPath(root.right) )
+      return 1 + Math.max(longestPath(root.left), longestPath(root.right))
   }
   
   const checkSequence = (root, sequence, sequenceIndex = 0) => {
