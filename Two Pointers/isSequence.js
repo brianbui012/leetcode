@@ -1,3 +1,6 @@
+// 392. is Subsequence 
+
+//Time Complexity O(n)
 var isSubsequence = function(s, t) {
     
     let start = 0;
